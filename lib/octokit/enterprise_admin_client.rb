@@ -2,6 +2,7 @@ require 'octokit/connection'
 require 'octokit/configurable'
 require 'octokit/warnable'
 require 'octokit/enterprise_admin_client/admin_stats'
+require 'octokit/enterprise_admin_client/ldap'
 require 'octokit/enterprise_admin_client/license'
 require 'octokit/enterprise_admin_client/orgs'
 require 'octokit/enterprise_admin_client/search_indexing'
@@ -22,6 +23,7 @@ module Octokit
     include Octokit::Connection
     include Octokit::Warnable
     include Octokit::EnterpriseAdminClient::AdminStats
+    include Octokit::EnterpriseAdminClient::Ldap
     include Octokit::EnterpriseAdminClient::License
     include Octokit::EnterpriseAdminClient::Orgs
     include Octokit::EnterpriseAdminClient::SearchIndexing
